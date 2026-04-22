@@ -159,11 +159,11 @@ else if (req.method === 'POST' && req.url.startsWith('/api/data')) {
         try {
             const data = JSON.parse(body);
             const result = await codehuntingCollection.insertOne({
-                id: data.id || randomUUID(),
+                id: Number(data.id) || randomUUID(),
                 tier_name: data.tier_name,
-                debug: data.debug,
-                price: data.price,
-                oneonone: data.oneonone
+                debug: Number(data.debug),
+                price: Number(data.price),
+                oneonone: Boolean(data.oneonone)
             });
             return sendJSON(res, 201, result);
 
