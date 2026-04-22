@@ -203,7 +203,7 @@ else if (req.method === 'DELETE' && req.url.startsWith('/api/data')) {
 }
 
 
-  // UPDATE game
+  // UPDATE data
 else if (req.method === 'PUT' && req.url.startsWith('/api/data')) {
     let body = "";
     req.on("data", chunk => {
