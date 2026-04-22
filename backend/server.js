@@ -189,7 +189,7 @@ else if (req.method === 'DELETE' && req.url.startsWith('/api/data')) {
         }
 
         const result = await codehuntingCollection.deleteOne({
-            id: id
+            id: Number(id)
         });
 
         return sendJSON(res, 200, {
