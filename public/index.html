@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <button id="logoutBtn">Logout</button>
+
+    <!--Create-->
+    <div class="container">
+
+        <div class="create">
+            <h2>Add Pricing</h2>
+            <form id="createPriceForm">
+                <input type="text" id="id" placeholder="ID" required> <br>
+                <input type="text" id="tier_name" placeholder="Tier Name" required> <br>
+                <input type="text" id="debug" placeholder="Debugs Allowed" required> <br>
+                <input type="text" id="price" placeholder="Price" required> <br>
+                <input type="text" id="oneonone" placeholder="one-on-one time? (true/false)" required> <br>
+                <button type="submit">Create Pricing</button>
+
+                <h3 id="createMsg"></h3>
+            </form>
+        </div>
+    
+    <!--Edit-->
+       
+            <h2 id="editSection" style="display:none"; >Edit Pricings</h2>
+            <div id="editing" style="display:none";>
+                <input type="text" id="editid" placeholder="Enter ID to edit" required> <br>
+                <input type="text" id="edittier_name" placeholder="Enter new tier name"> <br>
+                <input type="text" id="editdebug" placeholder="Enter new debug amount"> <br>
+                <input type="text" id="editprice" placeholder="Enter new price amount"> <br>
+                <input type="text" id="editoneonone" placeholder="Enter new true/false for on-on-one">
+
+                <div class="actions">
+                    <button id="saveEditBtn">Update Product</button>
+                    <button id="cancelEditBtn">Cancel</button>
+                </div>
+            </div>
+                <br><div id="editMsg"></div>
+        </div>
+    <!--Read-->
+        <div class="displayCards">
+            <h2>Listed Prices</h2>
+            <div id="pricings" class="pricings"></div>
+        </div>
+    </div>
+
+    <style>
+        :root{
+            background-color: lightslategray;
+        }
+        h1{
+            margin:10px;
+        }
+
+        #logoutBtn{
+            margin-left:60px;
+        }
+
+        h2{
+            display:flex;
+            justify-content:center;
+        }
+        #createPriceForm{
+            display:flex;
+            justify-content:center;
+        }
+        #pricings{
+            background-color:silver;
+            border-radius:70px;
+            border:3px solid black;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 20px;
+        }
+        #editSection{
+            justify-content: center;
+        }
+        #editing{
+            justify-content:center;
+        }
+    </style>
+
+    <script src="/js/notes.js"></script>
+</body>
+</html>

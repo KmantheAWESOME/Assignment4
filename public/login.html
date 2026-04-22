@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <!--take username and password-->
+    <h1>Login Page</h1>
+
+    <form id="loginForm">
+        <label>Email:</label> <input type="text" name="username" id="username" placeholder = "Enter Email"> <br>
+        <label>Password:</label> <input type="password" name="password" id="password" placeholder = "Password"><br>
+
+        <button id="login" type="submit">Login</button>
+    </form>
+    
+    <p id="error"></p>
+
+    <p>Don't have an account? <a href="/register">Register here</a></p>
+
+    <style>
+        :root{
+            background-color: lightslategray;
+        }
+    </style>
+
+    <script src="/js/auth.js"></script>
+</body>
+</html>

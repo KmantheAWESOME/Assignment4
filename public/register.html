@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Page</title>
+</head>
+<body>
+  <h1>Register</h1>
+  <form id="registerForm">
+    <div>
+      <label>Name:</label><br>
+      <input type="text" id="name" required>
+    </div>
+    <br>
+    <div>
+      <label>Email:</label><br>
+      <input type="email" id="email" required>
+    </div>
+    <br>
+    <div>
+      <label>Password:</label><br>
+      <input type="password" id="password" required>
+    </div>
+    <br>
+    <button type="submit">Register</button>
+  </form>
+
+  <p id="errorMsg" style="color:red;"></p>
+  <p id="successMsg" style="color:green;"></p>
+
+  <p>Already have an account? <a href="/">Login here</a></p>
+
+  <style>
+        :root{
+            background-color: lightslategray;
+        }
+  </style>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
